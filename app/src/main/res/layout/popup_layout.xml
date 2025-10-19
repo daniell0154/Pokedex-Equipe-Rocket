@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="365dp"
+    android:background="@drawable/bg_pesquisar"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/tituloPopup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:layout_marginEnd="34dp"
+            android:fontFamily="@font/press_start_2p"
+            android:text="Selecione um pokémon!"
+            android:textColor="@color/md_theme_background"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerPopup"
+            android:layout_width="340dp"
+            android:layout_height="240dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tituloPopup"
+            tools:listitem="@layout/item_pokemon" />
+
+        <FrameLayout
+            android:id="@+id/framePassarPoke"
+            android:layout_width="97dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerPopup">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/bgPassarPoke"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/botao" />
+
+            <Button
+                android:id="@+id/btPassarPoke"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/press_start_2p"
+                android:text="Próximo"
+                android:textColor="@android:color/white"
+                android:textSize="7sp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameVoltarPoke"
+            android:layout_width="97dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerPopup">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/bgVoltarPoke"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/botao" />
+
+            <Button
+                android:id="@+id/btVoltarPoke"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/press_start_2p"
+                android:text="Voltar"
+                android:textColor="@android:color/white"
+                android:textSize="7sp" />
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

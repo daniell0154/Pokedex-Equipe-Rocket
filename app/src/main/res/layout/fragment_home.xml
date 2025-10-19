@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_rocket">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/pesquisar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_pesquisar"
+            android:hint="Pesquisar..."
+            android:imeOptions="actionSearch"
+            android:paddingStart="48dp"
+            android:paddingEnd="16dp"
+            android:singleLine="true"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iconSearch"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="16dp"
+            android:src="@android:drawable/ic_menu_search"
+            android:tint="#FFFFFF" />
+    </FrameLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPoke"
+        android:layout_width="344dp"
+        android:layout_height="524dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+        app:layout_constraintVertical_bias="0.0"
+        app:reverseLayout="false"
+        tools:listitem="@layout/item_pokemon" />
+
+    <FrameLayout
+        android:id="@+id/framePassarPoke"
+        android:layout_width="97dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="544dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bgPassarPoke"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/botao" />
+
+        <Button
+            android:id="@+id/btPassarPoke"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/press_start_2p"
+            android:text="Próximo"
+            android:textColor="@android:color/white"
+            android:textSize="7sp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameVoltarPoke"
+        android:layout_width="97dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="544dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bgVoltarPoke"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/botao" />
+
+        <Button
+            android:id="@+id/btVoltarPoke"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/press_start_2p"
+            android:text="Voltar"
+            android:textColor="@android:color/white"
+            android:textSize="7sp" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

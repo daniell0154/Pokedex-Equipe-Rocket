@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_rocket"
+    tools:context=".ui.activity.VisualizarPokemon">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardFoto"
+        android:layout_width="298dp"
+        android:layout_height="296dp"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="38dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/fundoCard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_poke_tec" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/gifPokemon"
+                android:layout_width="225dp"
+                android:layout_height="225dp"
+                android:layout_marginStart="37dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/img_placeholder" />
+
+            <FrameLayout
+                android:id="@+id/mudarCorContainer"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="22dp"
+                app:layout_constraintEnd_toEndOf="@+id/fundoCard"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/mudarImgCor"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:background="@drawable/botao" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/textoCor"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/shiny"
+                    android:fontFamily="@font/press_start_2p"
+                    android:textSize="8sp" />
+
+            </FrameLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/nomePokemonVisu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="TextView"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardFoto" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTipos"
+        android:layout_width="150dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nomePokemonVisu"
+        tools:listitem="@layout/item_tipo" />
+
+    <TextView
+        android:id="@+id/pesoPokemon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="TextView"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numeroPokeVisu" />
+
+    <TextView
+        android:id="@+id/numeroPokeVisu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="52dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="TextView"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nomePokemonVisu" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/statsContainer"
+        android:layout_width="285dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="192dp"
+        android:background="@color/md_theme_onErrorContainer_highContrast"
+        android:orientation="vertical"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nomePokemonVisu">
+
+        <GridLayout
+            android:id="@+id/statsGrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="22dp"
+            android:columnCount="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.09"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvTipos">
+
+            <!-- HP -->
+            <TextView
+                android:id="@+id/hpTitulo"
+                android:fontFamily="@font/press_start_2p"
+                android:text="HP:"
+                android:textColor="@color/md_theme_onBackground" />
+
+            <TextView
+                android:id="@+id/hp"
+                android:fontFamily="@font/press_start_2p"
+                android:text="65"
+                android:textColor="@color/md_theme_onBackground" />
+
+            <!-- Velocidade -->
+            <TextView
+                android:id="@+id/veloTitulo"
+                android:fontFamily="@font/press_start_2p"
+                android:text="Velocidade:"
+                android:textColor="@color/md_theme_onBackground" />
+
+            <TextView
+                android:id="@+id/velocidade"
+                android:fontFamily="@font/press_start_2p"
+                android:text="105"
+                android:textColor="@color/md_theme_onBackground" />
+
+            <!-- Ataque -->
+            <TextView
+                android:id="@+id/ataqueTitulo"
+                android:fontFamily="@font/press_start_2p"
+                android:text="Ataque:"
+                android:textColor="@color/md_theme_onBackground" />
+
+            <TextView
+                android:id="@+id/ataque"
+                android:fontFamily="@font/press_start_2p"
+                android:text="100"
+                android:textColor="@color/md_theme_onBackground" />
+
+            <!-- Defesa -->
+            <TextView
+                android:id="@+id/defesaTitulo"
+                android:fontFamily="@font/press_start_2p"
+                android:text="Defesa:"
+                android:textColor="@color/md_theme_onBackground" />
+
+            <TextView
+                android:id="@+id/defesa"
+                android:fontFamily="@font/press_start_2p"
+                android:text="70"
+                android:textColor="@color/md_theme_onBackground" />
+
+            <!-- Ataque Especial -->
+            <TextView
+                android:id="@+id/ataqueEspecialTitulo"
+                android:fontFamily="@font/press_start_2p"
+                android:text="Ataque especial:"
+                android:textColor="@color/md_theme_onBackground" />
+
+            <TextView
+                android:id="@+id/ataqueEspecial"
+                android:fontFamily="@font/press_start_2p"
+                android:text="80"
+                android:textColor="@color/md_theme_onBackground" />
+
+            <!-- Defesa Especial -->
+            <TextView
+                android:id="@+id/defesaEspecialTitulo"
+                android:fontFamily="@font/press_start_2p"
+                android:text="Defesa especial:"
+                android:textColor="@color/md_theme_onBackground" />
+
+            <TextView
+                android:id="@+id/defesaEspecial"
+                android:fontFamily="@font/press_start_2p"
+                android:text="80"
+                android:textColor="@color/md_theme_onBackground" />
+
+        </GridLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/btnVoltar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="22dp"
+        android:tint="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/cardFoto"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/voltar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
