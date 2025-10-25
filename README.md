@@ -28,10 +28,6 @@ Um **projeto de aprendizado Mobile em Kotlin** que explora a criação de aplica
 - **Android Studio** – IDE utilizada  
 - **RecyclerView** – Para listagem eficiente de Pokémons  
 - **Retrofit** – Para consumo da [PokeAPI](https://pokeapi.co/)  
-- **ViewModel & LiveData** – Para gerenciamento de estado  
-- **Coroutines** – Para chamadas assíncronas de API  
-
----
 
 ## Como rodar
 
